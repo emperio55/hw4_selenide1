@@ -8,8 +8,10 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class SoftAssertionsTest {
     @BeforeAll
-    static void beforeAll(){
+    static void PrepareToRun(){
+        Configuration.browser = "Chrome";
         Configuration.pageLoadStrategy = "eager";
+        Configuration.browserSize = "1920x900";
     }
 
     @Test
